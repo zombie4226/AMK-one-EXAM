@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMK-one | Slim online shoppen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<title>
+          Cookie Consent Box using HTML CSS & JavaScript
+      </title>
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+<body>
+
+<div id="cookieBanner" class="cookie-banner">
+  <p>🍪 Deze website gebruikt cookies om je ervaring te verbeteren. Accepteer je onze cookies?</p>
+  <button id="acceptCookies">Accepteren</button>
+</div>
+
+
+  <div id="messageBox" class="message-box"></div>
+  <div class="dealbar">⚡ Vandaag: hype deals, snelle levering in BENELUX en veilige checkout</div>
+
+  <header class="site-header">
+    <a href="#home" class="logo"><img src="image1.png" alt="AMK-one logo"></a>
+    <div class="search-box">
+      <span>🔎</span>
+      <input id="searchInput" type="search" placeholder="Zoek kleding, sneakers, accessoires...">
+      <button id="searchBtn" type="button">Zoeken</button>
+    </div>
+    <nav>
+      <a href="#categorieen">Categorieën</a>
+      <a href="#deals">Deals</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cart" href="login.html">Shop</a>
+  </header>
+
+  <main id="home">
+    <section class="market-hero">
+      <div class="hero-left">
+        <p class="eyebrow">AwayMarketingKatalyst-one</p>
+        <h1>Een frisse marketplace voor fashion, accessoires en populaire deals.</h1>
+        <p class="intro">AMK-one verkoopt online kleding en accessoires via leveranciers. De focus ligt op scherpe prijzen, snelle levering, duidelijke service en producten die op dit moment populair zijn.</p>
+        <div class="hero-buttons">
+          <a class="btn-main" href="login.html">Start shoppen</a>
+          <a class="btn-ghost" href="#over">Over AMK-one</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-top">
+          <span>🔥 Trending now</span>
+          <strong>Nieuwe drops</strong>
+        </div>
+        <div class="mini-grid">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600&q=80" alt="Kleding">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Sneakers">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80" alt="Accessoires">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80" alt="Mode">
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-row">
+      <div><b>16+</b><span></span></div>
+      <div><b>BENELUX</b><span></span></div>
+      <div><b>Dropshipping</b><span></span></div>
+      <div><b>Online</b><span></span></div>
+    </section>
+
+    <section id="categorieen" class="category-section">
+      <div class="section-title">
+        <p class="eyebrow">Shop per categorie</p>
+        <h2>Alles in één moderne webshop</h2>
+      </div>
+      <div class="category-layout">
+        <aside class="category-menu">
+          <h3>Populaire keuzes</h3>
+          <a href="#deals">👕 Streetwear</a>
+          <a href="#deals">👟 Sneakers</a>
+          <a href="#deals">🎒 Accessoires</a>
+          <a href="#deals">🏷️ Kortingen</a>
+          <a href="#deals">⭐ Nieuwe producten</a>
+        </aside>
+        <div class="category-banner">
+          <h3>AMK-one Club</h3>
+          <p>Ontvang promoties, kortingsbonnen en updates over producten die op dat moment hype zijn.</p>
+          <a href="login.html">Lid worden</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="deals" class="products-section">
+      <div class="section-title center">
+        <p class="eyebrow">Nieuwe deals</p>
+        <h2>Producten die klanten snel willen vinden</h2>
+      </div>
+      <div class="product-grid">
+        <article class="item"><span class="label">Hot</span><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=80" alt="Streetwear"><h3>Streetwear kleding</h3><p>Trendy outfits voor jongeren en jongvolwassenen.</p><button class="deal-btn" data-product="0" type="button" onclick="openDeal(0)">Bekijk deal</button></article>
+        <article class="item"><span class="label blue">Nieuw</span><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Sneakers"><h3>Sneakers</h3><p>Populaire modellen met focus op prijs-kwaliteit.</p><button class="deal-btn" data-product="1" type="button" onclick="openDeal(1)">Bekijk deal</button></article>
+        <article class="item"><span class="label">Sale</span><img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80" alt="Accessoires"><h3>Accessoires</h3><p>Praktische items voor dagelijks gebruik.</p><button class="deal-btn" data-product="2" type="button" onclick="openDeal(2)">Bekijk deal</button></article>
+      </div>
+      <p id="noResult" class="no-result" style="display:none;">Geen resultaat gevonden. Probeer: kleding, sneakers of accessoires.</p>
+      <div id="dealDetails" class="deal-details" style="display:none;">
+        <h3 id="dealTitle">Deal</h3>
+        <p id="dealText"></p>
+        <a class="btn-main small" href="#contact">Contacteer AMK-one</a>
+      </div>
+    </section>
+
+    <section id="over" class="about-block">
+      <div>
+        <p class="eyebrow">Over ons</p>
+        <h2>Professioneel, online en gemaakt om snel te groeien.</h2>
+      </div>
+      <p>
+
+AMK-one is een online fashion webshop met een focus op streetwear, sneakers en accessoires. We brengen de nieuwste trends samen op één plek, zodat jij eenvoudig jouw stijl kan vinden.
+
+Wij geloven in snelle service, moderne looks en een soepele winkelervaring. Elke collectie is geselecteerd met oog voor stijl en dagelijks gebruik.
+
+AMK-one staat voor mode die toegankelijk is, altijd up-to-date en gemaakt voor iedereen die er goed wil uitzien.</p>
+    </section>
+
+    <section id="service" class="service-section">
+      <div class="service-card"><span>🚚</span><h3>Snelle levering</h3><p>Levering via leveranciers met duidelijke communicatie.</p></div>
+      <div class="service-card"><span>💬</span><h3>Klantenservice</h3><p>Goede service om vertrouwen en loyaliteit op te bouwen.</p></div>
+      <div class="service-card"><span>🔒</span><h3>Veilig shoppen</h3><p>Professionele webshop met duidelijke info en veilige betaling.</p></div>
+      <div class="service-card"><span>🏷️</span><h3>Scherpe prijzen</h3><p>Zo dicht mogelijk bij de prijzen van leveranciers blijven.</p></div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+      <h2>Mis geen nieuwe drops</h2>
+      <p>Schrijf je in voor acties, promoties en nieuwe producten.</p>
+     <form action="login.html?redirect=newsletter">
+  <input type="email" placeholder="Jouw e-mail" required>
+  <button type="submit">Inschrijven</button>
+</form>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Vragen over bestelling of samenwerking?</h2>
+        <p>
+  <b>Mail:</b> info@amk-one.be
+  <a href="mailto:info@amk-one.be" class="contact-btn">
+    ✉️ E-mail
+  </a>
+</p>
+
+<p>
+  <b>WhatsApp:</b> +32 123 45 67 89
+  <a href="https://wa.me/32123456789" target="_blank" class="contact-btn">
+    💬 WhatsApp
+  </a>
+</p>
+
+<p>
+  <b>Telefoon:</b> +32 123 45 67 89
+  <a href="tel:+32123456789" class="contact-btn">
+    📞 Bellen
+  </a>
+</p>
+      </div>
+      <form class="contact-form">
+        <input placeholder="Naam" required>
+        <input type="email" placeholder="E-mail" required>
+        <select><option>Klantenservice</option><option>Leverancier</option><option>Samenwerking</option></select>
+        <textarea rows="5" placeholder="Bericht"></textarea>
+        <button type="button" onclick="window.location.href='login.html'">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-left">
+      <img src="image1.png" alt="AMK-one logo" class="footer-logo">
+
+      <p>© 2026 AMK-one — Online marketplace voor kleding en accessoires.</p>
+
+      <p>
+        AMK-one biedt trendy kleding, sneakers en accessoires voor een moderne
+        doelgroep. Wij streven naar een veilige en betrouwbare online winkelervaring.
+      </p>
+
+      <p>E-mail: info@amk-one.be</p>
+    </div>
+
+    <div class="footer-right">
+      <a href="#">Privacybeleid /</a>
+      <a href="#">Cookiebeleid /</a>
+      <a href="#">Algemene voorwaarden /</a>
+      <a href="#">Toegankelijkheid /</a>
+      <a href="#">Retourbeleid /</a>
+      <a href="#">Verzending & levering /</a>
+      <a href="#">Veelgestelde vragen /</a>
+      <a href="#contact">Contact /</a>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
